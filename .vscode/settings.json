@@ -1,8 +1,13 @@
 {
     "cSpell.words": [
+        "catboost",
         "levelname",
         "mlproject",
         "numpy",
-        "seaborn"
+        "scikit",
+        "seaborn",
+        "violinplot",
+        "whitegrid",
+        "xgboost"
     ]
 }
