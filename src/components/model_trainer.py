@@ -6,7 +6,7 @@ import numpy as np
 import pickle
 
 from src.exception import CustomException
-from src.utils import save_object, evaluate_model
+from src.utils import save_object, evaluate_models
 from src.logger import logging
 
 from catboost import CatBoostRegressor
@@ -58,13 +58,46 @@ class ModelTrianer:
                 "AdaBoost Regressor": AdaBoostRegressor(),
             }
             
+            ## create a param grid for hyperparameter tuning
+            param_grid = {
+                "Linear Regression": {},
+                "KNeighbors Regressor": {
+                    "n_neighbors": [3, 5, 7],
+                    "weights": ["uniform", "distance"],
+                },
+                "Decision Tree Regressor": {
+                    'criterion':['squared_error', 'friedman_mse', 'absolute_error', 'poisson'],
+                    "max_depth": [None, 10, 20],
+                    "min_samples_split": [2, 5, 10],
+                },
+                "Random Forest Regressor": {
+                    "n_estimators": [50, 100],
+                    "max_depth": [None, 10, 20],
+                },
+                "Gradient Boosting Regressor": {
+                    "n_estimators": [50, 100],
+                    "learning_rate": [0.01, 0.1],
+                },
+                "XGBoost Regressor": {
+                    "n_estimators": [50, 100],
+                    "learning_rate": [0.01, 0.1],
+                },
+                "CatBoost Regressor": {},
+                "AdaBoost Regressor": {
+                    "n_estimators": [50, 100],
+                    "learning_rate": [0.01, 0.1],
+                },
+            }
+            
+            logging.info("Model training started")
+            
             
             ## create a dictionary to store model reports
-            model_reports:dict = evaluate_model(X_train= X_train,
+            model_reports:dict = evaluate_models(X_train= X_train,
                                                 y_train= y_train,
                                                 X_test= X_test,
                                                 y_test= y_test,
-                                                models=models)
+                                                models=models,param_grid=param_grid)
             best_model_score = max(sorted(model_reports.values()))
             best_model_name = list(model_reports.keys())[
                 list(model_reports.values()).index(best_model_score)
