@@ -4,6 +4,8 @@
         "levelname",
         "mlproject",
         "numpy",
+        "predictdata",
+        "rgba",
         "scikit",
         "seaborn",
         "violinplot",
