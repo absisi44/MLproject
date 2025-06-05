@@ -3,7 +3,8 @@
 
 _A machine learning web app that predicts math scores based on academic and demographic factors._
 
-![Demo Screenshot](static/demo-screenshot.png) <!-- Add your screenshot here -->
+![Demo Screenshot](static/demo_`1.png) <!-- Add your screenshot here -->
+
 
 ## 🚀 Features
 
@@ -32,5 +33,5 @@ _A machine learning web app that predicts math scores based on academic and demo
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/yourusername/student-performance-predictor.git
+   git clone https://github.com/absisi44/MLproject.git
    cd student-performance-predictor
