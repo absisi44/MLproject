@@ -136,7 +136,13 @@
             <div class="result-card">
                 <div class="result-value">
                     <i class="fas fa-square-root-alt"></i>
-                    <h2>Predicted Math Score: <span>{{ "%.2f"|format(results) }}</span>/100</h2>
+                   <div class="result-value">
+                    <i class="fas fa-square-root-alt"></i>
+                    <h2>Predicted Math Score: 
+                        <span class="score">{{ "%.2f"|format(results) }}</span>
+                        <span class="out-of">/ 100</span>
+                    </h2>
+                </div>
                 </div>
                 <div class="result-meter">
                     <div class="meter-fill" style="width: {{ results }}%"></div>

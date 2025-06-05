@@ -10,6 +10,7 @@
         "seaborn",
         "violinplot",
         "whitegrid",
+        "WSGI",
         "xgboost"
     ]
 }

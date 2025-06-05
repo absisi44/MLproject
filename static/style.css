@@ -490,3 +490,22 @@ body {
         font-size: 1.5rem;
     }
 }
+
+.result-value h2 {
+    font-size: 1.25rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.score {
+    color: #4361ee;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.out-of {
+    color: #666;
+    font-weight: 400;
+}
