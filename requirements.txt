@@ -2,9 +2,10 @@
 # You can install these packages using pip:
 # pip install -r requirements.txt
 # Basic packages
-numpy 
-pandas 
-matplotlib 
+# Core packages with version pins
+numpy
+pandas
+matplotlib
 seaborn
 scikit-learn
 catboost
