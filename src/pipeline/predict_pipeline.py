@@ -23,7 +23,7 @@ class PredictPipeline:
             
             return predictions
         except Exception as e:
-            raise CustomException(e, sys)
+            raise CustomException(e,sys)
 
 
 ## Create a CustomData class to map the input data
