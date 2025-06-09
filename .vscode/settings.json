@@ -2,6 +2,7 @@
     "cSpell.words": [
         "catboost",
         "devel",
+        "gunicorn",
         "levelname",
         "mlproject",
         "numpy",
