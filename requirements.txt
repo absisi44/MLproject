@@ -3,14 +3,14 @@
 # pip install -r requirements.txt
 # Basic packages
 # Core packages with version pins
-numpy
-pandas
-matplotlib
-seaborn
-scikit-learn
-catboost
-xgboost
-Flask
-dill 
--e .
+numpy==1.26.4
+pandas==2.2.2
+matplotlib==3.8.4
+seaborn==0.13.2
+scikit-learn==1.6.1
+catboost==1.2.3
+xgboost==2.0.3
+Flask==2.3.3
+dill==0.3.8
+#-e .
 
