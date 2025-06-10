@@ -21,6 +21,9 @@ class PredictPipeline:
             data_scaled = preprocessor.transform(features)
             predictions = model.predict(data_scaled)
             
+            # Clamp and round the prediction
+            predictions = [ round(max(0, min(100, pred))) for pred in predictions]
+            
             return predictions
         except Exception as e:
             raise CustomException(e,sys)
